@@ -16,12 +16,13 @@ class conn extends db {
     }
 }
 
+
 class work extends conn {
     function create_db(){
-        $sql = "CREATE DATABASE testDB "; // no need 
+        $sql = "CREATE DATABASE JobPortal "; // no need 
         return $this->connect()->query($sql);
     }
 }
 
 $obj = new work;
-var_dump($obj->create_db());
+$obj->create_db();
