@@ -1,9 +1,14 @@
 <?php include '../header.php'; ?>
-<div id="login">
-    <h3 class="text-center pt-5">Login form</h3>
-    <div class="container">
+<style>
+body{
+    background-color: #E7E7E7;
+}
+</style>
+    
+    <div class="container mt-2">
         <div  class="row justify-content-center ">
-            <form class="col-md-5" id="login-row">
+            <form class="col-md-5 bg-light p-5" id="login-row">
+            <h3 class="text-center">LOGIN</h3>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -26,5 +31,5 @@
             </form>
         </div>
     </div>
-</div>
+
 <?php include '../footer.php'; ?>

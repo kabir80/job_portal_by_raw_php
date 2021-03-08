@@ -1,9 +1,30 @@
 <?php include '../header.php'; ?>
-<form action="process.php" method="get">
-    <input type="username" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password"> 
-    <input type="submit" value="signup" name="signup">
+<style>
+body{
+    background-color: #E7E7E7;
+}
+</style>
+    
+    <div class="container mt-2">
+        <div  class="row justify-content-center ">
+            <form class="col-md-5 bg-light p-5" id="login-row">
 
-</form>
+            <h3 class="text-center">SIGNUP</h3>
+
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 <?php include '../footer.php'; ?>
