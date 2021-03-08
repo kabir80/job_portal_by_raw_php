@@ -10,19 +10,25 @@ class conn extends db {
       $this->host = "localhost";
       $this->user = "root";
       $this->pass = "";
-      $this->dbname = "config";
-      $conn = new mysqli($this->host,$this->user,$this->pass);
+      $this->dbname = "jobportal";
+      $conn = new mysqli($this->host,$this->user,$this->pass,$this->dbname);
       return $conn;
     }
 }
 
 
 class work extends conn {
-    function create_db(){
-        $sql = "CREATE DATABASE JobPortal "; // no need 
-        return $this->connect()->query($sql);
+    
+    function insert_user($username,$password_hash){
+        $sql = "INSERT INTO user (username,password) VALUES ('$username','$password_hash')";
+       if( $this->connect()->query($sql)==TRUE){
+                return 'Data Inserted';
+       }else{
+          return  $this->connect()->error;
+       }
+        
     }
+
 }
 
 $obj = new work;
-$obj->create_db();
