@@ -5,9 +5,9 @@ body{
 }
 </style>
     
-    <div class="container mt-2">
+    <div class="container mt-3">
         <div  class="row justify-content-center ">
-            <form class="col-md-5 bg-light p-5" id="login-row">
+            <form class="col-md-5 bg-white p-5" id="login-row">
             <h3 class="text-center">LOGIN</h3>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>

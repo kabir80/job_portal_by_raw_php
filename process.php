@@ -2,7 +2,7 @@
 include "class.db.php";
 
 if ($_GET['signup'] == "signup") {
-    $username = $_GET['username'];
+    $username = $_GET['email'];
     $password = $_GET['password'];
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
     
