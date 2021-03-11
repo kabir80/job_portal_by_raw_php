@@ -2,10 +2,16 @@
 include "class.db.php";
 
 if ($_GET['signup'] == "signup") {
-    $username = $_GET['email'];
+    $email = $_GET['email'];
     $password = $_GET['password'];
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
     
-    echo $obj->insert_user($username, $password_hash);
-    echo 'working';
+    try {
+  
+        $obj->insert_user('user@example.com', 'asdfasdf');
+        echo "inserted";
+      } catch (Exception $e) {
+        echo $e->getMessage();
+      }
+    
 }
